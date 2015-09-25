@@ -13,6 +13,7 @@ Dotenv.load
 
 require 'uri'
 require 'pathname'
+require 'bcrypt'
 
 require 'pg'
 require 'active_record'

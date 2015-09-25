@@ -4,6 +4,7 @@ ruby '2.2.1'
 # PostgreSQL driver
 gem 'pg'
 gem 'soundcloud'
+gem 'bcrypt'
 
 # Sinatra driver
 gem 'sinatra'

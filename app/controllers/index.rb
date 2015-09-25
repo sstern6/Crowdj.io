@@ -9,5 +9,5 @@ get '/songs' do
 
     @tracks = client.get('/tracks', :q => "#{params[:song]}", :limit => page_size, :order => 'created_at')
 
-    erb :tracks
+    erb :"/tracks/index"
 end
