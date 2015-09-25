@@ -13,6 +13,21 @@
 </head>
 <header>
   <h3>Crowdj.io</h3>
+
+  <% if current_user %>
+
+    <h1>Welcome to CrowDJ.io, <%= @current_user.username.capitalize%></h1>
+    <a href="/logout">Logout</a>
+    <a href="/users/<%=@current_user.id%>">Profile</a>
+    <a href="/">Home</a>
+  <% else %>
+    <h1>Welcome to crowDJ.io Stranger!</h1>
+    <div id="login-signup-section">
+      <a href="/">Home</a>
+      <a id="login-link" href="/login">Login</a>
+      <a id="signup-link" href="/signup">Sign up</a>
+    </div>
+  <% end %>
 </header>
 <body>
   <%= yield %>

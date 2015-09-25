@@ -1,0 +1,15 @@
+<h4>Sign Up!</h4>
+
+<div id="signup-errors">
+ <%if @signup_errors%>
+    <p><%=@signup_errors[0]%></p>
+  <%end%>
+</div>
+
+<form method="post" action="/users/new">
+  <input type="text" name="user[first_name]" placeholder="First Name">
+  <input type="text" name="user[last_name]" placeholder="Last Name">
+  <input type="text" name="user[username]" placeholder="Username">
+  <input type="password" name="user[password]" placeholder="Password">
+  <input type="submit" value="Sign up!">
+</form>
