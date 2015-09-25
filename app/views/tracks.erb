@@ -1,9 +1,7 @@
 
-
-
 <%@tracks.each do |track|%>
   <p><%= track.title %></p>
-  <img src="<%= track.artwork_url %>"></img>
+  <img src="<%=track.artwork_url%>"></img>
     <audio controls>
      <source src=<%= track.stream_url+'?client_id='+ENV["CLIENT_ID"] %> type="audio/ogg">
     </audio> </br>

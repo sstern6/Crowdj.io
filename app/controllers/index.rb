@@ -3,15 +3,11 @@ get '/' do
   erb :index
 end
 
-get '/soundcloud' do
+get '/songs' do
 
-    # p "********************* TRACK *************************"
-    @tracks = client.get('/tracks', :q => "#{params[:song]}")
-    # @group = client.get('/groups')
-    # p "********************* STREAM_URL *************************"
+    page_size = 10
 
-    # p @group
-
+    @tracks = client.get('/tracks', :q => "#{params[:song]}", :limit => page_size, :order => 'created_at')
 
     erb :tracks
 end
