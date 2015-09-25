@@ -4,4 +4,11 @@
   <audio controls>
      <source src=<%= track.stream_url+'?client_id='+ENV["CLIENT_ID"] %> type="audio/ogg">
   </audio> </br>
+  <%if current_user%>
+  <form action="/likes" method="post">
+    <input type="hidden" name="song[song_id]" value="">
+    <input type="hidden" name="song[user_id]" value="<%=current_user.id%>">
+    <input id="submit" type="submit" value="LIKE">
+  </form>
+  <%end%>
 <%end%>

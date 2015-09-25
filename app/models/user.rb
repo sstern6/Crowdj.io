@@ -2,8 +2,7 @@ include BCrypt
 
 class User < ActiveRecord::Base
   # Remember to create a migration!
-  has_many :likes
-  has_many :songs, :through => :likes
+  has_many :songs
 
   validates :username, uniqueness: true, presence: true
   validates :first_name, presence: true
