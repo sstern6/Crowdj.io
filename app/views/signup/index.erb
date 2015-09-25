@@ -1,5 +1,11 @@
 <h4>Sign Up!</h4>
-<em><%=@user_error.to_s%></em>
+
+<div id="signup-errors">
+ <%if @signup_errors%>
+    <p><%=@signup_errors[0]%></p>
+  <%end%>
+</div>
+
 <form method="post" action="/users/new">
   <input type="text" name="user[first_name]" placeholder="First Name">
   <input type="text" name="user[last_name]" placeholder="Last Name">
