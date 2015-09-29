@@ -1,12 +1,15 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '2.2.1'
 
 # PostgreSQL driver
 gem 'pg'
+gem 'soundcloud'
+gem 'bcrypt'
 
 # Sinatra driver
 gem 'sinatra'
 gem 'sinatra-contrib'
+gem 'dotenv'
 
 gem 'activesupport', '~>4.2.0'
 gem 'activerecord', '~>4.2.0'
